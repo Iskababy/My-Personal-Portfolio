@@ -1,0 +1,1949 @@
+/* =========================
+   GENERAL
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(135deg, #faf9ff, #f3f1ff, #ffffff);
+    color: #222;
+}
+
+
+/* =========================
+   NAVIGATION
+========================= */
+
+.navbar {
+    width: 100%;
+    padding: 20px 8%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: white;
+
+    border-bottom: 1px solid #eeeeee;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 4px 20px rgba(108, 99, 255, 0.08);
+    position: relative;
+    z-index: 10;
+}
+
+.logo {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: White;
+    border: 2px solid black;
+    color: #6c63ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+
+.nav-links {
+    list-style: none;
+
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #6c63ff;
+}
+.nav-links a.active {
+    color: #6c63ff;
+}   
+
+
+/* =========================
+   HOME
+========================= */
+
+.home {
+    min-height: calc(100vh - 75px);
+
+    display: flex;
+    align-items: center;
+
+    padding: 70px 8%;
+
+    position: relative;
+    overflow: hidden;
+
+    background:
+        radial-gradient(circle at 10% 20%, rgba(108, 99, 255, 0.15), transparent 30%),
+        radial-gradient(circle at 90% 80%, rgba(170, 120, 255, 0.12), transparent 30%);
+}
+
+.home-content {
+    width: 100%;
+    max-width: 1100px;
+
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: 0.9fr 1.4fr;
+
+    align-items: center;
+
+    gap: 80px;
+
+    position: relative;
+    z-index: 2;
+}
+/* =========================
+   HOME IMAGE
+========================= */
+
+.home-image {
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-circle {
+    width: 330px;
+    height: 330px;
+
+    border-radius: 50%;
+
+    padding: 10px;
+
+    background: linear-gradient(
+        135deg,
+        #6c63ff,
+        #9b8cff,
+        #d5ceff
+    );
+
+    box-shadow:
+        0 20px 50px rgba(108, 99, 255, 0.25),
+        0 0 0 15px rgba(108, 99, 255, 0.06);
+
+    position: relative;
+    z-index: 2;
+}
+
+.image-circle img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+
+    display: block;
+
+    border: 6px solid white;
+}
+/* =========================
+   DECORATIVE DOTS
+========================= */
+
+.floating-dot {
+    position: absolute;
+
+    border-radius: 50%;
+
+    background-color: #6c63ff;
+
+    z-index: 1;
+}
+
+.dot-one {
+    width: 22px;
+    height: 22px;
+
+    top: 20px;
+    right: 45px;
+}
+
+.dot-two {
+    width: 14px;
+    height: 14px;
+
+    bottom: 35px;
+    left: 35px;
+
+    background-color: #a99cff;
+}
+
+.dot-three {
+    width: 10px;
+    height: 10px;
+
+    top: 70px;
+    left: 35px;
+
+    background-color: #d0caff;
+}
+/* =========================
+   DECORATIVE DOTS
+========================= */
+
+.floating-dot {
+    position: absolute;
+
+    border-radius: 50%;
+
+    background-color: #6c63ff;
+
+    z-index: 1;
+}
+
+.dot-one {
+    width: 22px;
+    height: 22px;
+
+    top: 20px;
+    right: 45px;
+}
+
+.dot-two {
+    width: 14px;
+    height: 14px;
+
+    bottom: 35px;
+    left: 35px;
+
+    background-color: #a99cff;
+}
+
+.dot-three {
+    width: 10px;
+    height: 10px;
+
+    top: 70px;
+    left: 35px;
+
+    background-color: #d0caff;
+}
+
+/* =========================
+   PROFILE
+========================= */
+
+.profile-picture {
+    width: 140px;
+    height: 140px;
+    margin: 0 auto 25px;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow:
+    0 10px 30px rgba(108, 99, 255, 0.25),
+    0 0 0 8px rgba(108, 99, 255, 0.06);
+}
+
+.profile-picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* =========================
+   TEXT
+========================= */
+
+.subtitle {
+    color: #6c63ff;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 15px;
+}
+
+.home h1 {
+    font-size: 50px;
+
+    margin-bottom: 20px;
+}
+
+.home h1 span {
+    color: #6c63ff;
+}
+
+.introduction {
+    color: #666;
+
+    font-size: 17px;
+
+    line-height: 1.7;
+
+    margin-bottom: 30px;
+}
+
+
+/* =========================
+   BUTTON
+========================= */
+
+.portfolio-button {
+    display: inline-block;
+
+    padding: 15px 28px;
+
+    background-color: #6c63ff;
+
+    color: white;
+
+    text-decoration: none;
+
+    border-radius: 10px;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+
+    box-shadow: 0 10px 25px rgba(108, 99, 255, 0.30);
+}
+
+.portfolio-button:hover {
+    background-color: #5148d8;
+
+    transform: translateY(-4px);
+
+    box-shadow: 0 15px 30px rgba(108, 99, 255, 0.40);
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    text-align: center;
+
+    padding: 20px;
+
+    background-color: white;
+
+    border-top: 1px solid #eeeeee;
+
+    color: #777;
+
+    font-size: 14px;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 700px) {
+
+    .navbar {
+        padding: 18px 5%;
+    }
+
+    .nav-links {
+        gap: 12px;
+    }
+
+    .nav-links a {
+        font-size: 13px;
+    }
+
+    .home h1 {
+        font-size: 36px;
+    }
+
+    .introduction {
+        font-size: 15px;
+    }
+
+    .profile-picture {
+        width: 115px;
+        height: 115px;
+        font-size: 35px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+        animation: float 4s ease-in-out infinite;
+        @media (max-width: 800px) {
+
+    .home {
+        padding: 60px 20px;
+    }
+
+    .home-content {
+        grid-template-columns: 1fr;
+
+        gap: 40px;
+
+        text-align: center;
+    }
+
+    .home-image {
+        order: 1;
+    }
+
+    .home-text {
+        order: 2;
+
+        margin: auto;
+    }
+
+    .image-circle {
+        width: 240px;
+        height: 240px;
+    }
+
+    .home h1 {
+        font-size: 40px;
+    }
+
+    .introduction {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+    }
+
+}
+/* =========================
+   ABOUT ME
+========================= */
+
+.about {
+    min-height: calc(100vh - 75px);
+
+    padding: 80px 20px;
+
+    position: relative;
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 90% 15%,
+            rgba(108, 99, 255, 0.12),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 5% 85%,
+            rgba(170, 120, 255, 0.10),
+            transparent 30%
+        );
+}
+
+.about-container {
+    max-width: 1000px;
+
+    margin: auto;
+
+    position: relative;
+    z-index: 2;
+}
+
+
+/* =========================
+   ABOUT HEADER
+========================= */
+
+.about-subtitle {
+    text-align: center;
+
+    color: #6c63ff;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 12px;
+}
+
+.about h1 {
+    text-align: center;
+
+    font-size: 50px;
+
+    margin-bottom: 45px;
+}
+
+
+/* =========================
+   ABOUT CARDS
+========================= */
+
+.about-card {
+    background: rgba(255, 255, 255, 0.90);
+
+    padding: 30px;
+
+    margin-bottom: 22px;
+
+    border-radius: 18px;
+
+    border: 1px solid rgba(108, 99, 255, 0.10);
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.06),
+        0 0 25px rgba(108, 99, 255, 0.04);
+
+    transition: 0.3s;
+}
+
+.about-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 15px 35px rgba(0, 0, 0, 0.09),
+        0 0 30px rgba(108, 99, 255, 0.10);
+}
+
+.about-card h2 {
+    color: #6c63ff;
+
+    margin-bottom: 15px;
+
+    font-size: 23px;
+}
+
+.about-card h3 {
+    margin-bottom: 8px;
+
+    font-size: 19px;
+}
+
+.about-card p {
+    color: #666;
+
+    line-height: 1.8;
+
+    margin-bottom: 8px;
+}
+
+
+/* =========================
+   SKILLS
+========================= */
+
+.skills {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 12px;
+}
+
+.skills span {
+    background: linear-gradient(
+        135deg,
+        #efeeff,
+        #e7e4ff
+    );
+
+    color: #5148d8;
+
+    padding: 10px 17px;
+
+    border-radius: 25px;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    border: 1px solid rgba(108, 99, 255, 0.08);
+
+    box-shadow: 0 5px 12px rgba(108, 99, 255, 0.08);
+
+    transition: 0.3s;
+}
+
+.skills span:hover {
+    transform: translateY(-3px);
+
+    box-shadow: 0 8px 18px rgba(108, 99, 255, 0.15);
+}
+
+
+/* =========================
+   HOBBIES
+========================= */
+
+.hobbies {
+    padding-left: 20px;
+
+    color: #666;
+
+    line-height: 2;
+
+    margin: 0;
+}
+
+.hobbies li {
+    padding-left: 5px;
+
+    margin-bottom: 4px;
+}
+
+
+/* =========================
+   ABOUT MOBILE
+========================= */
+
+@media (max-width: 700px) {
+
+    .about {
+        padding: 55px 15px;
+    }
+
+    .about h1 {
+        font-size: 40px;
+
+        margin-bottom: 30px;
+    }
+
+    .about-card {
+        padding: 23px;
+    }
+
+}
+/* =========================
+   PROJECTS
+========================= */
+
+.projects {
+    min-height: calc(100vh - 75px);
+
+    padding: 80px 20px;
+
+    position: relative;
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 10% 20%,
+            rgba(108, 99, 255, 0.12),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 90% 80%,
+            rgba(170, 120, 255, 0.10),
+            transparent 30%
+        );
+}
+
+.projects-container {
+    max-width: 1100px;
+
+    margin: auto;
+
+    position: relative;
+    z-index: 2;
+}
+
+
+/* =========================
+   PROJECT HEADER
+========================= */
+
+.projects-subtitle {
+    text-align: center;
+
+    color: #6c63ff;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 12px;
+}
+
+.projects h1 {
+    text-align: center;
+
+    font-size: 50px;
+
+    margin-bottom: 12px;
+}
+
+.projects-introduction {
+    text-align: center;
+
+    color: #666;
+
+    max-width: 650px;
+
+    margin: 0 auto 45px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================
+   PROJECT GRID
+========================= */
+
+.project-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 28px;
+}
+
+
+/* =========================
+   PROJECT CARD
+========================= */
+
+.project-card {
+    background: rgba(255, 255, 255, 0.92);
+
+    border-radius: 18px;
+
+    overflow: hidden;
+
+    border: 1px solid rgba(108, 99, 255, 0.10);
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.06),
+        0 0 25px rgba(108, 99, 255, 0.04);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+
+    box-shadow:
+        0 18px 40px rgba(0, 0, 0, 0.10),
+        0 0 30px rgba(108, 99, 255, 0.14);
+}
+
+
+/* =========================
+   PROJECT IMAGE
+========================= */
+
+.project-image {
+    height: 210px;
+
+    background: linear-gradient(
+        135deg,
+        #efeeff,
+        #f8f8ff
+    );
+
+    overflow: hidden;
+
+    cursor: pointer;
+
+    position: relative;
+}
+
+.project-image::after {
+    content: "View Image";
+
+    position: absolute;
+
+    left: 50%;
+    top: 50%;
+
+    transform: translate(-50%, -50%);
+
+    background: rgba(108, 99, 255, 0.90);
+
+    color: white;
+
+    padding: 9px 15px;
+
+    border-radius: 20px;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    opacity: 0;
+
+    transition: 0.3s;
+}
+
+.project-image:hover::after {
+    opacity: 1;
+}
+
+.project-image img {
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition: transform 0.4s ease;
+}
+
+.project-image:hover img {
+    transform: scale(1.06);
+}
+
+
+/* =========================
+   PROJECT CONTENT
+========================= */
+
+.project-content {
+    padding: 25px;
+}
+
+.project-content h2 {
+    margin-bottom: 12px;
+
+    font-size: 22px;
+}
+
+.project-content p {
+    color: #666;
+
+    line-height: 1.7;
+
+    margin-bottom: 15px;
+}
+
+
+/* =========================
+   TECHNOLOGY BADGE
+========================= */
+
+.technologies {
+    display: inline-block;
+
+    margin-top: 5px;
+
+    padding: 7px 12px;
+
+    background: #efeeff;
+
+    color: #5148d8;
+
+    border-radius: 20px;
+
+    font-size: 13px;
+
+    font-weight: bold;
+}
+
+.technologies strong {
+    color: #5148d8;
+}
+
+
+/* =========================
+   PROJECT MOBILE
+========================= */
+
+@media (max-width: 850px) {
+
+    .project-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .projects {
+        padding: 55px 15px;
+    }
+
+    .projects h1 {
+        font-size: 40px;
+    }
+
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .project-image {
+        height: 200px;
+    }
+
+}
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact {
+    min-height: calc(100vh - 75px);
+
+    padding: 80px 20px;
+
+    position: relative;
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 10% 20%,
+            rgba(108, 99, 255, 0.12),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 90% 80%,
+            rgba(170, 120, 255, 0.10),
+            transparent 30%
+        );
+}
+
+.contact-container {
+    max-width: 700px;
+
+    margin: auto;
+
+    position: relative;
+    z-index: 2;
+}
+
+
+/* =========================
+   CONTACT HEADER
+========================= */
+
+.contact-subtitle {
+    text-align: center;
+
+    color: #6c63ff;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 12px;
+}
+
+.contact h1 {
+    text-align: center;
+
+    font-size: 50px;
+
+    margin-bottom: 12px;
+}
+
+.contact-introduction {
+    text-align: center;
+
+    color: #666;
+
+    line-height: 1.7;
+
+    margin-bottom: 40px;
+}
+
+
+/* =========================
+   CONTACT FORM
+========================= */
+
+.contact-form {
+    background: rgba(255, 255, 255, 0.94);
+
+    padding: 38px;
+
+    border-radius: 20px;
+
+    border: 1px solid rgba(108, 99, 255, 0.10);
+
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.07),
+        0 0 30px rgba(108, 99, 255, 0.06);
+}
+
+
+/* =========================
+   FORM LABELS
+========================= */
+
+.contact-form label {
+    display: block;
+
+    font-weight: bold;
+
+    margin-bottom: 8px;
+
+    margin-top: 20px;
+}
+
+.contact-form label:first-child {
+    margin-top: 0;
+}
+
+
+/* =========================
+   FORM INPUTS
+========================= */
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+
+    padding: 14px 15px;
+
+    border: 1px solid #ddd;
+
+    border-radius: 10px;
+
+    background-color: #fafaff;
+
+    color: #222;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 15px;
+
+    outline: none;
+
+    resize: vertical;
+
+    transition: 0.3s;
+
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #6c63ff;
+
+    background-color: white;
+
+    box-shadow:
+        0 0 0 4px rgba(108, 99, 255, 0.10);
+}
+
+
+/* =========================
+   SUBMIT BUTTON
+========================= */
+
+.contact-form .portfolio-button {
+    width: 100%;
+
+    margin-top: 28px;
+
+    border: none;
+
+    cursor: pointer;
+}
+
+
+/* =========================
+   FORM MESSAGE
+========================= */
+
+#formMessage {
+    text-align: center;
+
+    color: #6c63ff;
+
+    font-weight: bold;
+
+    margin-top: 18px;
+
+    line-height: 1.5;
+}
+
+
+/* =========================
+   CONTACT MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+    .contact {
+        padding: 55px 15px;
+    }
+
+    .contact h1 {
+        font-size: 40px;
+    }
+
+    .contact-form {
+        padding: 25px;
+    }
+
+}
+
+/* =========================
+   DARK MODE
+========================= */
+
+body.dark-mode {
+    background-color: #121212 !important;
+    color: white !important;
+}
+
+body.dark-mode .navbar {
+    background-color: #1e1e1e !important;
+    border-bottom-color: #333 !important;
+}
+
+body.dark-mode .nav-links a {
+    color: #ffffff !important;
+}
+
+body.dark-mode .nav-links a.active,
+body.dark-mode .nav-links a:hover {
+    color: #8b83ff !important;
+}
+
+body.dark-mode .home,
+body.dark-mode .about,
+body.dark-mode .projects,
+body.dark-mode .contact {
+    background-color: #121212 !important;
+}
+
+body.dark-mode .about-card,
+body.dark-mode .project-card,
+body.dark-mode .contact-form {
+    background-color: #1e1e1e !important;
+    border-color: #333 !important;
+}
+
+body.dark-mode .introduction,
+body.dark-mode .about-card p,
+body.dark-mode .project-content p,
+body.dark-mode .projects-introduction,
+body.dark-mode .contact-introduction,
+body.dark-mode .hobbies {
+    color: #cccccc !important;
+}
+
+body.dark-mode .about-card h3,
+body.dark-mode .project-content h2 {
+    color: white !important;
+}
+
+body.dark-mode footer {
+    background-color: #1e1e1e !important;
+    border-top-color: #333 !important;
+    color: #aaa !important;
+}
+
+body.dark-mode .logo {
+    background-color: #1e1e1e !important;
+    color: #8b83ff !important;
+    border-color: black !important;
+}
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+/* =========================
+   PERMANENT DARK MODE
+========================= */
+
+html,
+body {
+    background-color: #121212 !important;
+    color: #ffffff !important;
+}
+
+/* NAVBAR */
+
+.navbar {
+    background-color: #1e1e1e !important;
+    border-bottom: 1px solid #333 !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4) !important;
+}
+
+.nav-links a {
+    color: #ffffff !important;
+}
+
+.nav-links a.active,
+.nav-links a:hover {
+    color: #9b8cff !important;
+}
+
+/* HOME */
+
+.home {
+    background:
+        radial-gradient(
+            circle at 10% 20%,
+            rgba(108, 99, 255, 0.18),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 90% 80%,
+            rgba(170, 120, 255, 0.12),
+            transparent 30%
+        ) !important;
+}
+
+.introduction {
+    color: #cccccc !important;
+}
+
+/* ABOUT */
+
+.about {
+    background:
+        radial-gradient(
+            circle at 90% 15%,
+            rgba(108, 99, 255, 0.18),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 5% 85%,
+            rgba(170, 120, 255, 0.12),
+            transparent 30%
+        ) !important;
+}
+
+.about-card {
+    background: #1e1e1e !important;
+    border-color: #333 !important;
+    color: #ffffff !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4) !important;
+}
+
+.about-card p,
+.hobbies {
+    color: #cccccc !important;
+}
+
+.skills span {
+    background: #292650 !important;
+    color: #a9a1ff !important;
+}
+
+/* PROJECTS */
+
+.projects {
+    background:
+        radial-gradient(
+            circle at 10% 20%,
+            rgba(108, 99, 255, 0.18),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 90% 80%,
+            rgba(170, 120, 255, 0.12),
+            transparent 30%
+        ) !important;
+}
+
+.project-card {
+    background: #1e1e1e !important;
+    border-color: #333 !important;
+    color: #ffffff !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4) !important;
+}
+
+.project-content p,
+.projects-introduction {
+    color: #cccccc !important;
+}
+
+.technologies {
+    background: #292650 !important;
+    color: #a9a1ff !important;
+}
+
+/* CONTACT */
+
+.contact {
+    background:
+        radial-gradient(
+            circle at 10% 20%,
+            rgba(108, 99, 255, 0.18),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 90% 80%,
+            rgba(170, 120, 255, 0.12),
+            transparent 30%
+        ) !important;
+}
+
+.contact-introduction {
+    color: #cccccc !important;
+}
+
+.contact-form {
+    background: #1e1e1e !important;
+    border-color: #333 !important;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4) !important;
+}
+
+.contact-form input,
+.contact-form textarea {
+    background-color: #292929 !important;
+    color: white !important;
+    border-color: #444 !important;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    background-color: #303030 !important;
+    border-color: #6c63ff !important;
+}
+
+/* PROFILE */
+
+.image-circle img {
+    border-color: #1e1e1e !important;
+}
+
+/* FOOTER */
+
+footer {
+    background-color: #1e1e1e !important;
+    border-top-color: #333 !important;
+    color: #aaaaaa !important;
+}
+/* =========================
+   DARK MODERN PURPLE THEME
+========================= */
+
+html {
+    background: #0f0f14 !important;
+}
+
+body {
+    background: #0f0f14 !important;
+    color: #ffffff !important;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+    background: rgba(18, 18, 26, 0.95) !important;
+    border-bottom: 1px solid #292936 !important;
+}
+
+.nav-links a {
+    color: #dddddd !important;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: #8b83ff !important;
+}
+
+/* =========================
+   HOME
+========================= */
+
+.home {
+    background:
+        radial-gradient(
+            circle at 10% 20%,
+            rgba(108, 99, 255, 0.20),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 90% 80%,
+            rgba(170, 120, 255, 0.14),
+            transparent 30%
+        ) !important;
+}
+
+.home h1 {
+    color: #ffffff !important;
+}
+
+.home h1 span {
+    color: #8b83ff !important;
+}
+
+.introduction {
+    color: #b8b8c2 !important;
+}
+
+.subtitle {
+    color: #9b93ff !important;
+}
+
+.image-circle {
+    box-shadow:
+        0 20px 50px rgba(108, 99, 255, 0.35),
+        0 0 0 15px rgba(108, 99, 255, 0.08);
+}
+
+.image-circle img {
+    border-color: #1b1b24 !important;
+}
+
+/* =========================
+   ABOUT
+========================= */
+
+.about {
+    background:
+        radial-gradient(
+            circle at 90% 15%,
+            rgba(108, 99, 255, 0.16),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 5% 85%,
+            rgba(170, 120, 255, 0.10),
+            transparent 30%
+        ) !important;
+}
+
+.about h1 {
+    color: #ffffff !important;
+}
+
+.about-subtitle {
+    color: #9b93ff !important;
+}
+
+.about-card {
+    background: rgba(29, 29, 40, 0.92) !important;
+    border-color: rgba(139, 131, 255, 0.15) !important;
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.30),
+        0 0 25px rgba(108, 99, 255, 0.06) !important;
+}
+
+.about-card h2 {
+    color: #9b93ff !important;
+}
+
+.about-card h3 {
+    color: #ffffff !important;
+}
+
+.about-card p,
+.hobbies {
+    color: #b8b8c2 !important;
+}
+
+/* SKILLS */
+
+.skills span {
+    background: linear-gradient(
+        135deg,
+        #29264a,
+        #332f5c
+    ) !important;
+
+    color: #b5afff !important;
+
+    border-color: rgba(139, 131, 255, 0.15) !important;
+}
+
+/* =========================
+   PROJECTS
+========================= */
+
+.projects {
+    background:
+        radial-gradient(
+            circle at 10% 20%,
+            rgba(108, 99, 255, 0.16),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 90% 80%,
+            rgba(170, 120, 255, 0.10),
+            transparent 30%
+        ) !important;
+}
+
+.projects h1 {
+    color: #ffffff !important;
+}
+
+.projects-subtitle {
+    color: #9b93ff !important;
+}
+
+.projects-introduction {
+    color: #b8b8c2 !important;
+}
+
+.project-card {
+    background: rgba(29, 29, 40, 0.94) !important;
+    border-color: rgba(139, 131, 255, 0.15) !important;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.30),
+        0 0 25px rgba(108, 99, 255, 0.06) !important;
+}
+
+.project-content h2 {
+    color: #ffffff !important;
+}
+
+.project-content p {
+    color: #b8b8c2 !important;
+}
+
+.technologies {
+    background: #29264a !important;
+    color: #b5afff !important;
+}
+
+.technologies strong {
+    color: #b5afff !important;
+}
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact {
+    background:
+        radial-gradient(
+            circle at 10% 20%,
+            rgba(108, 99, 255, 0.16),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 90% 80%,
+            rgba(170, 120, 255, 0.10),
+            transparent 30%
+        ) !important;
+}
+
+.contact h1 {
+    color: #ffffff !important;
+}
+
+.contact-subtitle {
+    color: #9b93ff !important;
+}
+
+.contact-introduction {
+    color: #b8b8c2 !important;
+}
+
+.contact-form {
+    background: rgba(29, 29, 40, 0.94) !important;
+    border-color: rgba(139, 131, 255, 0.15) !important;
+
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.30),
+        0 0 30px rgba(108, 99, 255, 0.08) !important;
+}
+
+.contact-form label {
+    color: #ffffff !important;
+}
+
+.contact-form input,
+.contact-form textarea {
+    background: #20202b !important;
+    color: #ffffff !important;
+    border-color: #3b3b4b !important;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    background: #252533 !important;
+    border-color: #7d74ff !important;
+}
+
+/* =========================
+   BUTTON
+========================= */
+
+.portfolio-button {
+    background: linear-gradient(
+        135deg,
+        #6c63ff,
+        #8b7fff
+    ) !important;
+
+    color: #ffffff !important;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    background: #12121a !important;
+    color: #9999a8 !important;
+    border-top-color: #292936 !important;
+}
+
+/* ALL MAIN SECTIONS */
+
+.home,
+.about,
+.projects,
+.contact {
+    background: #121212 !important;
+    color: #ffffff !important;
+}
+
+/* NAVBAR */
+
+.navbar {
+    background: #1e1e1e !important;
+    border-bottom: 1px solid #333 !important;
+}
+
+/* NAVIGATION */
+
+.nav-links a {
+    color: #ffffff !important;
+}
+
+.nav-links a.active,
+.nav-links a:hover {
+    color: #8b83ff !important;
+}
+
+/* CARDS */
+
+.about-card,
+.project-card,
+.contact-form {
+    background: #1e1e1e !important;
+    color: #ffffff !important;
+    border-color: #333 !important;
+}
+
+/* TEXT */
+
+.about-card p,
+.project-content p,
+.projects-introduction,
+.contact-introduction,
+.introduction,
+.hobbies {
+    color: #cccccc !important;
+}
+
+/* INPUTS */
+
+.contact-form input,
+.contact-form textarea {
+    background: #292929 !important;
+    color: #ffffff !important;
+    border-color: #444 !important;
+}
+
+/* FOOTER */
+
+footer {
+    background: #1e1e1e !important;
+    color: #aaaaaa !important;
+    border-top-color: #333 !important;
+}
+/* =========================
+   DARK MODERN PURPLE THEME
+========================= */
+
+html {
+    background: #0f0f14 !important;
+}
+
+body {
+    background: #0f0f14 !important;
+    color: #ffffff !important;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+    background: rgba(18, 18, 26, 0.95) !important;
+    border-bottom: 1px solid #292936 !important;
+}
+
+.nav-links a {
+    color: #dddddd !important;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: #8b83ff !important;
+}
+
+/* =========================
+   HOME
+========================= */
+
+.home {
+    background:
+        radial-gradient(
+            circle at 10% 20%,
+            rgba(108, 99, 255, 0.20),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 90% 80%,
+            rgba(170, 120, 255, 0.14),
+            transparent 30%
+        ) !important;
+}
+
+.home h1 {
+    color: #ffffff !important;
+}
+
+.home h1 span {
+    color: #8b83ff !important;
+}
+
+.introduction {
+    color: #b8b8c2 !important;
+}
+
+.subtitle {
+    color: #9b93ff !important;
+}
+
+.image-circle {
+    box-shadow:
+        0 20px 50px rgba(108, 99, 255, 0.35),
+        0 0 0 15px rgba(108, 99, 255, 0.08);
+}
+
+.image-circle img {
+    border-color: #1b1b24 !important;
+}
+
+/* =========================
+   ABOUT
+========================= */
+
+.about {
+    background:
+        radial-gradient(
+            circle at 90% 15%,
+            rgba(108, 99, 255, 0.16),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 5% 85%,
+            rgba(170, 120, 255, 0.10),
+            transparent 30%
+        ) !important;
+}
+
+.about h1 {
+    color: #ffffff !important;
+}
+
+.about-subtitle {
+    color: #9b93ff !important;
+}
+
+.about-card {
+    background: rgba(29, 29, 40, 0.92) !important;
+    border-color: rgba(139, 131, 255, 0.15) !important;
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.30),
+        0 0 25px rgba(108, 99, 255, 0.06) !important;
+}
+
+.about-card h2 {
+    color: #9b93ff !important;
+}
+
+.about-card h3 {
+    color: #ffffff !important;
+}
+
+.about-card p,
+.hobbies {
+    color: #b8b8c2 !important;
+}
+
+/* SKILLS */
+
+.skills span {
+    background: linear-gradient(
+        135deg,
+        #29264a,
+        #332f5c
+    ) !important;
+
+    color: #b5afff !important;
+
+    border-color: rgba(139, 131, 255, 0.15) !important;
+}
+
+/* =========================
+   PROJECTS
+========================= */
+
+.projects {
+    background:
+        radial-gradient(
+            circle at 10% 20%,
+            rgba(108, 99, 255, 0.16),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 90% 80%,
+            rgba(170, 120, 255, 0.10),
+            transparent 30%
+        ) !important;
+}
+
+.projects h1 {
+    color: #ffffff !important;
+}
+
+.projects-subtitle {
+    color: #9b93ff !important;
+}
+
+.projects-introduction {
+    color: #b8b8c2 !important;
+}
+
+.project-card {
+    background: rgba(29, 29, 40, 0.94) !important;
+    border-color: rgba(139, 131, 255, 0.15) !important;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.30),
+        0 0 25px rgba(108, 99, 255, 0.06) !important;
+}
+
+.project-content h2 {
+    color: #ffffff !important;
+}
+
+.project-content p {
+    color: #b8b8c2 !important;
+}
+
+.technologies {
+    background: #29264a !important;
+    color: #b5afff !important;
+}
+
+.technologies strong {
+    color: #b5afff !important;
+}
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact {
+    background:
+        radial-gradient(
+            circle at 10% 20%,
+            rgba(108, 99, 255, 0.16),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 90% 80%,
+            rgba(170, 120, 255, 0.10),
+            transparent 30%
+        ) !important;
+}
+
+.contact h1 {
+    color: #ffffff !important;
+}
+
+.contact-subtitle {
+    color: #9b93ff !important;
+}
+
+.contact-introduction {
+    color: #b8b8c2 !important;
+}
+
+.contact-form {
+    background: rgba(29, 29, 40, 0.94) !important;
+    border-color: rgba(139, 131, 255, 0.15) !important;
+
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.30),
+        0 0 30px rgba(108, 99, 255, 0.08) !important;
+}
+
+.contact-form label {
+    color: #ffffff !important;
+}
+
+.contact-form input,
+.contact-form textarea {
+    background: #20202b !important;
+    color: #ffffff !important;
+    border-color: #3b3b4b !important;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    background: #252533 !important;
+    border-color: #7d74ff !important;
+}
+
+/* =========================
+   BUTTON
+========================= */
+
+.portfolio-button {
+    background: linear-gradient(
+        135deg,
+        #6c63ff,
+        #8b7fff
+    ) !important;
+
+    color: #ffffff !important;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    background: #12121a !important;
+    color: #9999a8 !important;
+    border-top-color: #292936 !important;
+}
+
+

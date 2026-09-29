@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Projects | Francisca Amon</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+
+    <nav class="navbar">
+
+        <div class="logo">
+            FA
+        </div>
+
+        <ul class="nav-links">
+
+            <li>
+                <a href="index.html">Home</a>
+            </li>
+
+            <li>
+                <a href="about.html">About Me</a>
+            </li>
+
+            <li>
+                <a class="active" href="projects.html">Projects</a>
+            </li>
+
+            <li>
+                <a href="contact.html">Contact</a>
+            </li>
+
+        </ul>
+    </nav>
+
+
+    <!-- Projects -->
+
+    <main class="projects">
+
+        <div class="projects-container">
+
+            <p class="projects-subtitle">
+                MY WORK
+            </p>
+
+            <h1>
+                My Projects
+            </h1>
+
+            <p class="projects-introduction">
+                Here are some sample projects I have worked on
+                as an Information Technology student.
+            </p>
+
+
+            <!-- Project Cards -->
+
+            <div class="project-grid">
+
+
+                <!-- Project 1 -->
+
+                <div class="project-card">
+                <div class="project-image">
+                   <img src="images/study-planner.jpg"
+                    alt="Study Planner" 
+                    onclick="openImage(this)">
+                </div>
+
+                    <div class="project-content">
+
+                        <h2>
+                            Study Planner
+                        </h2>
+
+                        <p>
+                            A study planning interface designed to
+                            help students organize their subjects,
+                            tasks, and study schedules.
+                        </p>
+
+                        <p class="technologies">
+                            <strong>Technologies:</strong>
+                           Figma
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Project 2 -->
+
+                <div class="project-card">
+
+                    <div class="project-image">
+                        <img src="images/VB-Operators.png"
+                         alt = "VB Operators"
+                         onclick="openImage(this)">
+                    </div>
+
+                    <div class="project-content">
+
+                        <h2>
+                           VB Operators
+                        </h2>
+
+                        <p>
+                            A Visual Basic project that demonstrates different types of operators 
+                            and how they are used in programming.
+                        </p>
+
+                        <p class="technologies">
+                            <strong>Technologies:</strong>
+                            Visual Basic 6.0
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Project 3 -->
+
+                <div class="project-card">
+
+                    <div class="project-image">
+                        <img src = "images/7.4.2-Implement DHCP4-pka.png" 
+                        alt = "DHCP Implementation" 
+                        onclick="openImage(this)">
+                    </div>
+
+                    <div class="project-content">
+
+                        <h2>
+                           DHCP Implementation
+                        </h2>
+
+                        <p>
+                            A Cisco Packet Tracer activity that demonstrates
+                            how DHCP is implemented to automatically assign 
+                            IP addresses to network devices.
+                        </p>
+
+                        <p class="technologies">
+                            <strong>Technologies:</strong>
+                           Cisco Packet Tracer
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <!-- Footer -->
+
+    <footer>
+
+        <p>
+            © 2026 Francisca Amon. All Rights Reserved.
+        </p>
+
+    </footer>
+
+<script>
+function openImage(image) {
+    const fullscreen = document.createElement("div");
+
+    fullscreen.style.position = "fixed";
+    fullscreen.style.top = "0";
+    fullscreen.style.left = "0";
+    fullscreen.style.width = "100%";
+    fullscreen.style.height = "100%";
+    fullscreen.style.backgroundColor = "rgba(0, 0, 0, 0.9)";
+    fullscreen.style.display = "flex";
+    fullscreen.style.justifyContent = "center";
+    fullscreen.style.alignItems = "center";
+    fullscreen.style.zIndex = "99999";
+
+    const fullImage = document.createElement("img");
+
+    fullImage.src = image.src;
+    fullImage.style.maxWidth = "90%";
+    fullImage.style.maxHeight = "90%";
+    fullImage.style.objectFit = "contain";
+
+    fullscreen.appendChild(fullImage);
+    document.body.appendChild(fullscreen);
+
+    fullscreen.onclick = function() {
+        fullscreen.remove();
+    };
+}
+</script>
+<script src="script.js"></script>
+</body>
+
+</html>
